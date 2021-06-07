@@ -1,0 +1,7 @@
+materialweather.settings:
+  path: '/admin/config/services/materialweather'
+  defaults:
+    _form: '\Drupal\materialweather\Form\PassConfigForm'
+    _title: 'materialweather settings'
+  requirements:
+    _permission: 'administer materialweather settings'

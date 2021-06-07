@@ -1,0 +1,17 @@
+materialweather_theme:
+  version: 8.x
+  css:
+    base:
+      css/materialweather.css: {}
+
+materialweatherhourlyforecast_theme:
+  version: 8.x
+  css:
+    base:
+      css/materialweatherhourlyforecast.css: {}
+
+materialweatherdailyforecast_theme:
+  version: 8.x
+  css:
+    base:
+      css/materialweatherdailyforecast.css: {}

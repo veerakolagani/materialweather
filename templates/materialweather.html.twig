@@ -1,0 +1,107 @@
+{#
+/**
+ * @file
+ * Template for the materialweather block for current weather.
+ * Available variables:
+ * - materialweather_detail: array of weather list.
+ */
+#}
+
+<div class="material-container">
+  <div class="material-list">
+    {% if (materialweather_detail.name) and (materialweather_detail.country) %}
+    <div class="city"><h3>{{ materialweather_detail.name }}, {{ materialweather_detail.country }}</h3></div>
+    {% elseif (materialweather_detail.name) %}
+    <div class="city"><h3>{{ materialweather_detail.name }}</h3></div>
+    {% elseif (materialweather_detail.country) %}
+    <div class="city"><h3>{{ materialweather_detail.country }}</h3></div>
+    {% endif %}
+    {% if(materialweather_detail.date) %}
+    <div class="date">
+      <span class="label">{{ materialweather_detail.date }}</span>
+    </div>
+    {% endif %}
+    {% if(materialweather_detail.time) %}
+    <div class="time">
+      <span class="label">{{ materialweather_detail.time }}</span>
+    </div>
+    {% endif %}
+    {% if (materialweather_detail.weather.image) %}
+    <div class="weather-icon">
+      <span class="data"><img src="http://openweathermap.org/img/w/{{ materialweather_detail.weather.image }}.png"/></span>
+    </div>
+    {% endif %}
+    {% if(materialweather_detail.temp) %}
+    <div class="temperature">
+      <span class="label">{{ materialweather_detail.temp }}</span>
+    </div>
+    {% endif %}
+    {% if (materialweather_detail.weather.desc) %}
+    <div class="weather-datail">
+      <span class="label">{{ materialweather_detail.weather.desc }}</span>
+    </div>
+    {% endif %}
+    {% if(materialweather_detail.humidity) %}
+    <div class="humidity">
+      <span class="label"> Humidity {{ materialweather_detail.humidity }}</span>
+    </div>
+    {% endif %}
+    {% if(materialweather_detail.temp_max) %}
+    <div class="maximum-temprature">
+      <span class="label"> H {{ materialweather_detail.temp_max }}</span>
+    </div>
+    {% endif %}
+    {% if(materialweather_detail.temp_min) %}
+    <div class="minimum-tempreature">
+      <span class="label"> L {{ materialweather_detail.temp_min }}</span>
+    </div>
+    {% endif %}
+    <div class="material-option">
+      {% if(materialweather_detail.pressure) %}
+      <div class="pressure material-row">
+        <span class="label"> pressure <br> {{ materialweather_detail.pressure }} hpa</span>
+      </div>
+      {% endif %}
+      {% if(materialweather_detail.sea_level) %}
+      <div class="sea-level material-row">
+        <span class="label"> sea level <br> {{ materialweather_detail.sea_level }}</span>
+      </div>
+      {% endif %}
+      {% if(materialweather_detail.grnd_level) %}
+      <div class="ground-level material-row">
+        <span class="label"> ground level<br> {{ materialweather_detail.grnd_level }}</span>
+      </div>
+      {% endif %}
+      {% if(materialweather_detail.coord) %}
+      <div class="coordinate material-row">
+        <span class="label">Geo coords <br>[{{ materialweather_detail.coord.lat }},{{ materialweather_detail.coord.lon }}]</span>
+      </div>
+      {% endif %}
+      {% if(materialweather_detail.wind-speed) %}
+      <div class="wind-speed material-row">
+        <span class="label"> wind speed <br>{{ materialweather_detail.wind-speed }}</span>
+      </div>
+      {% endif %}
+      {% if(materialweather_detail.wind_deg) %}
+      <div class="wind-degree material-row">
+        <span class="label"> wind flow <br>{{ materialweather_detail.wind_deg }}</span>
+      </div>
+      {% endif %}
+      {% if(materialweather_detail.day) %}
+      <div class="day material-row">
+        <span class="label"> day <br> {{ materialweather_detail.day }}</span>
+      </div>
+      {% endif %}
+      {% if(materialweather_detail.sunrise) %}
+      <div class="sunrise material-row">
+        <span class="label"> sunrise <br>{{ materialweather_detail.sunrise }}</span>
+      </div>
+      {% endif %}
+      {% if(materialweather_detail.sunset) %}
+      <div class="sunset material-row">
+        <span class="label"> sunset <br> {{ materialweather_detail.sunset }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

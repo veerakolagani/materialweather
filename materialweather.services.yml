@@ -1,0 +1,4 @@
+services:
+  materialweather.weather_service:
+    class: Drupal\materialweather\WeatherService
+    arguments: ['@http_client']

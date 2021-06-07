@@ -1,0 +1,5 @@
+materialweather.settings:
+  title: materialweather
+  description: 'Configure to add the appid value.'
+  route_name: materialweather.settings
+  parent: system.admin_config

@@ -1,0 +1,9 @@
+name: Material Weather
+type: module
+description: Details about the weather forecast
+package: custom
+configure: materialweather.settings
+version: '8.x-1.0'
+core: '8.x'
+project: 'materialweather'
+datestamp: 1623070644
